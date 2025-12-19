@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comece a investir com a Ágora - Ágora Investimentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>ÁGORA<span>Investimentos</span></h1>
+                </div>
+                <div class="nav-info">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Atendimento personalizado e gratuito</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Seus Dados</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Seu Perfil</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Seus Objetivos</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Próximos Passos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left Side - Form -->
+                <div class="form-section">
+                    <!-- Step 1: Dados Pessoais -->
+                    <div class="form-step active" id="step-1">
+                        <div class="step-header">
+                            <h2>Prazer em conhecê-lo!</h2>
+                            <p>Nos conte um pouco sobre você para que possamos oferecer a melhor assessoria</p>
+                        </div>
+                        <form class="form-content">
+                            <div class="form-group">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone/WhatsApp</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="data-nascimento">Data de nascimento</label>
+                                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="genero">Gênero</label>
+                                    <select id="genero" name="genero" required>
+                                        <option value="">Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="outro">Outro</option>
+                                        <option value="nao-informar">Prefiro não informar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-next" onclick="nextStep(2)">
+                                Continuar
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Step 2: Perfil de Investidor -->
+                    <div class="form-step" id="step-2">
+                        <div class="step-header">
+                            <h2>Conte-nos sobre sua experiência</h2>
+                            <p>Essas informações nos ajudam a preparar recomendações personalizadas para você</p>
+                        </div>
+                        <form class="form-content">
+                            <div class="form-group">
+                                <label for="experiencia">Experiência com investimentos</label>
+                                <select id="experiencia" name="experiencia" required>
+                                    <option value="">Selecione sua experiência</option>
+                                    <option value="iniciante">Iniciante - Nunca investi antes</option>
+                                    <option value="basico">Básico - Tenho poupança ou CDB</option>
+                                    <option value="intermediario">Intermediário - Invisto em renda fixa e alguns fundos</option>
+                                    <option value="avancado">Avançado - Invisto em ações e derivativos</option>
+                                    <option value="profissional">Profissional - Opero no mercado há anos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="renda">Renda mensal aproximada</label>
+                                <select id="renda" name="renda" required>
+                                    <option value="">Selecione sua faixa de renda</option>
+                                    <option value="ate-3k">Até R$ 3.000</option>
+                                    <option value="3k-5k">R$ 3.000 - R$ 5.000</option>
+                                    <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
+                                    <option value="10k-20k">R$ 10.000 - R$ 20.000</option>
+                                    <option value="20k-50k">R$ 20.000 - R$ 50.000</option>
+                                    <option value="50k+">Acima de R$ 50.000</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="patrimonio">Patrimônio para investir</label>
+                                <select id="patrimonio" name="patrimonio" required>
+                                    <option value="">Quanto você pretende investir inicialmente?</option>
+                                    <option value="ate-5k">Até R$ 5.000</option>
+                                    <option value="5k-20k">R$ 5.000 - R$ 20.000</option>
+                                    <option value="20k-50k">R$ 20.000 - R$ 50.000</option>
+                                    <option value="50k-100k">R$ 50.000 - R$ 100.000</option>
+                                    <option value="100k-500k">R$ 100.000 - R$ 500.000</option>
+                                    <option value="500k+">Acima de R$ 500.000</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tolerância a risco</label>
+                                <div class="radio-group">
+                                    <label class="radio-card">
+                                        <input type="radio" name="risco" value="conservador" required>
+                                        <div class="radio-content">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <strong>Conservador</strong>
+                                            <span>Priorizo segurança e preservação do capital</span>
+                                        </div>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="risco" value="moderado">
+                                        <div class="radio-content">
+                                            <i class="fas fa-balance-scale"></i>
+                                            <strong>Moderado</strong>
+                                            <span>Busco equilíbrio entre risco e retorno</span>
+                                        </div>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="risco" value="agressivo">
+                                        <div class="radio-content">
+                                            <i class="fas fa-rocket"></i>
+                                            <strong>Agressivo</strong>
+                                            <span>Aceito riscos maiores por mais rentabilidade</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="btn-back" onclick="prevStep(1)">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Voltar
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep(3)">
+                                    Continuar
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Objetivos -->
+                    <div class="form-step" id="step-3">
+                        <div class="step-header">
+                            <h2>O que você busca nos investimentos?</h2>
+                            <p>Conhecer seus objetivos nos permite preparar soluções sob medida para você</p>
+                        </div>
+                        <form class="form-content">
+                            <div class="form-group">
+                                <label>O que você busca? (pode selecionar mais de uma opção)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="aposentadoria">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-umbrella-beach"></i>
+                                            <strong>Aposentadoria</strong>
+                                            <span>Construir patrimônio para o futuro</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="renda-passiva">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                            <strong>Renda Passiva</strong>
+                                            <span>Gerar renda recorrente com investimentos</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="reserva-emergencia">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-piggy-bank"></i>
+                                            <strong>Reserva de Emergência</strong>
+                                            <span>Criar uma poupança de segurança</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="imovel">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-home"></i>
+                                            <strong>Comprar Imóvel</strong>
+                                            <span>Juntar dinheiro para o imóvel próprio</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="viagem">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-plane"></i>
+                                            <strong>Viagens</strong>
+                                            <span>Realizar a viagem dos sonhos</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="objetivo" value="estudos">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <strong>Educação</strong>
+                                            <span>Investir em educação própria ou dos filhos</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="prazo">Prazo para seus objetivos</label>
+                                <select id="prazo" name="prazo" required>
+                                    <option value="">Quando pretende usar o dinheiro?</option>
+                                    <option value="curto">Curto prazo (até 1 ano)</option>
+                                    <option value="medio">Médio prazo (1 a 5 anos)</option>
+                                    <option value="longo">Longo prazo (mais de 5 anos)</option>
+                                    <option value="variado">Tenho objetivos com prazos variados</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="interesse">O que mais te interessa?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="renda-fixa">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <span>Renda Fixa</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="acoes">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>Ações</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="fundos">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-briefcase"></i>
+                                            <span>Fundos</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="fiis">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-building"></i>
+                                            <span>FIIs</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="criptomoedas">
+                                        <div class="checkbox-content">
+                                            <i class="fab fa-bitcoin"></i>
+                                            <span>Cripto</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="interesse" value="internacional">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Internacional</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="btn-back" onclick="prevStep(2)">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Voltar
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep(4)">
+                                    Continuar
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 4: Finalização -->
+                    <div class="form-step" id="step-4">
+                        <div class="step-header">
+                            <h2>Perfeito! Já temos tudo que precisamos 🎉</h2>
+                            <p>Sua jornada de investimentos com a Ágora está prestes a começar</p>
+                        </div>
+                        <div class="form-content">
+                            <div class="summary-card">
+                                <div class="summary-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3>Em breve você terá seu assessor exclusivo!</h3>
+                                <p>Um dos nossos especialistas em investimentos entrará em contato com você nas próximas 24 horas para entender melhor suas necessidades e apresentar as melhores oportunidades do mercado.</p>
+                            </div>
+
+                            <div class="benefits-summary">
+                                <h4>O que a Ágora oferece para você:</h4>
+                                <div class="benefit-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <div>
+                                        <strong>Assessoria Personalizada</strong>
+                                        <span>Especialistas dedicados a entender suas necessidades e objetivos</span>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <div>
+                                        <strong>+300 Produtos</strong>
+                                        <span>Diversas opções de renda fixa, variável, fundos e muito mais</span>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <strong>Educação Financeira</strong>
+                                        <span>Conteúdos exclusivos, webinars e análises de mercado</span>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-tags"></i>
+                                    <div>
+                                        <strong>Taxas Competitivas</strong>
+                                        <span>Zero corretagem em ações e custos reduzidos</span>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <strong>Tecnologia de Ponta</strong>
+                                        <span>Plataforma completa e app intuitivo para investir de onde estiver</span>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-shield-check"></i>
+                                    <div>
+                                        <strong>Segurança Total</strong>
+                                        <span>Regulados pelo Banco Central, CVM e membros da B3</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-steps">
+                                <h4>Como será o contato:</h4>
+                                <ol>
+                                    <li><strong>Ligação ou WhatsApp:</strong> Nosso assessor entrará em contato pelo telefone informado</li>
+                                    <li><strong>Análise do seu perfil:</strong> Vamos conversar sobre seus objetivos e experiência</li>
+                                    <li><strong>Recomendações personalizadas:</strong> Apresentaremos as melhores oportunidades para você</li>
+                                    <li><strong>Abertura de conta:</strong> Se você decidir investir, auxiliaremos em todo o processo</li>
+                                </ol>
+                            </div>
+
+                            <div class="contact-preference">
+                                <h4>Preferência de contato:</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="contato" value="whatsapp" checked>
+                                        <div class="checkbox-content">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <span>WhatsApp</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="contato" value="ligacao" checked>
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-phone"></i>
+                                            <span>Ligação</span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-card small">
+                                        <input type="checkbox" name="contato" value="email">
+                                        <div class="checkbox-content">
+                                            <i class="fas fa-envelope"></i>
+                                            <span>E-mail</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="terms-group">
+                                <label class="checkbox-terms">
+                                    <input type="checkbox" id="termos" required>
+                                    <span>Li e aceito os <a href="#">termos de uso</a> e a <a href="#">política de privacidade</a></span>
+                                </label>
+                                <label class="checkbox-terms">
+                                    <input type="checkbox" id="comunicacao" checked>
+                                    <span>Aceito receber comunicações sobre produtos, ofertas e conteúdos educativos da Ágora</span>
+                                </label>
+                            </div>
+
+                            <button type="button" class="btn-finish" onclick="finishRegistration()">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar e aguardar contato do assessor
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Info -->
+                <div class="info-section">
+                    <div class="info-sticky">
+                        <div class="info-card">
+                            <div class="info-badge">Sobre a Ágora</div>
+                            <h3>A corretora que entende você</h3>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Assessoria personalizada e gratuita</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Mais de 300 opções de investimento</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Zero taxa de corretagem para ações</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Plataforma completa e intuitiva</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Educação financeira de qualidade</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Suporte dedicado quando precisar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trust-badges">
+                            <div class="trust-item">
+                                <i class="fas fa-university"></i>
+                                <span>Regulado pelo<br><strong>Banco Central</strong></span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Autorizado pela<br><strong>CVM</strong></span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Membro da<br><strong>B3</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"A melhor plataforma de investimentos que já usei. Interface simples e suporte incrível!"</p>
+                            <div class="testimonial-author">
+                                <strong>Marina Silva</strong>
+                                <span>Cliente desde 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ÁGORA<span>Investimentos</span></h3>
+                    <p>A plataforma completa para você investir com inteligência e segurança.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Precisa de ajuda?</h4>
+                    <p>Entre em contato conosco:</p>
+                    <div class="contact-info">
+                        <a href="tel:08007778888"><i class="fas fa-phone"></i> 0800 777 8888</a>
+                        <a href="mailto:contato@agorainvestimentos.com.br"><i class="fas fa-envelope"></i> contato@agorainvestimentos.com.br</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Ágora Investimentos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

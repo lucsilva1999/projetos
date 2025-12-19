@@ -1,0 +1,802 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-green: #01464d;
+    --light-green: #00c592;
+    --bg-black: #0a0a0a;
+    --bg-dark: #111111;
+    --bg-card: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2a2a2a;
+    --input-bg: #141414;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-black);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.logo h1 span {
+    color: var(--light-green);
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+.nav-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.nav-info i {
+    color: var(--light-green);
+}
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 24px 0;
+    z-index: 999;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.3s;
+}
+
+.progress-step.active .step-circle {
+    background: var(--light-green);
+    border-color: var(--light-green);
+    color: var(--bg-black);
+}
+
+.progress-step.completed .step-circle {
+    background: var(--dark-green);
+    border-color: var(--dark-green);
+    color: var(--text-primary);
+}
+
+.step-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.progress-step.active .step-label {
+    color: var(--light-green);
+    font-weight: 600;
+}
+
+.progress-line {
+    width: 80px;
+    height: 2px;
+    background: var(--border-color);
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 180px;
+    padding: 48px 0 80px;
+    min-height: calc(100vh - 180px);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+}
+
+/* Form Section */
+.form-section {
+    position: relative;
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-header {
+    margin-bottom: 32px;
+}
+
+.step-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.step-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.form-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(0, 197, 146, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Radio and Checkbox Cards */
+.radio-group,
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.radio-card,
+.checkbox-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-card input[type="radio"],
+.checkbox-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-content,
+.checkbox-content {
+    padding: 20px;
+    background: var(--input-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+.radio-card input[type="radio"]:checked ~ .radio-content,
+.checkbox-card input[type="checkbox"]:checked ~ .checkbox-content {
+    border-color: var(--light-green);
+    background: rgba(0, 197, 146, 0.05);
+}
+
+.radio-content:hover,
+.checkbox-content:hover {
+    border-color: var(--light-green);
+}
+
+.radio-content i,
+.checkbox-content i {
+    font-size: 24px;
+    color: var(--light-green);
+}
+
+.radio-content strong,
+.checkbox-content strong {
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.radio-content span,
+.checkbox-content span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.checkbox-card.small .checkbox-content {
+    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox-card.small .checkbox-content i {
+    font-size: 20px;
+}
+
+.checkbox-card.small .checkbox-content span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.btn-next,
+.btn-back,
+.btn-finish {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-next,
+.btn-finish {
+    background: var(--light-green);
+    color: var(--bg-black);
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-next:hover,
+.btn-finish:hover {
+    background: #00d9a0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 197, 146, 0.3);
+}
+
+.btn-back {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-back:hover {
+    border-color: var(--light-green);
+    transform: translateY(-2px);
+}
+
+.btn-finish {
+    width: 100%;
+    margin-top: 24px;
+    font-size: 18px;
+    padding: 18px 32px;
+}
+
+/* Summary Cards */
+.summary-card {
+    background: linear-gradient(135deg, rgba(0, 197, 146, 0.1) 0%, rgba(1, 70, 77, 0.1) 100%);
+    border: 1px solid rgba(0, 197, 146, 0.3);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.summary-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.summary-icon i {
+    font-size: 40px;
+    color: var(--bg-black);
+}
+
+.summary-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Benefits Summary */
+.benefits-summary {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.benefits-summary h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.benefit-item:last-child {
+    border-bottom: none;
+}
+
+.benefit-item i {
+    font-size: 20px;
+    color: var(--light-green);
+    margin-top: 2px;
+}
+
+.benefit-item div {
+    flex: 1;
+}
+
+.benefit-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.benefit-item span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Next Steps */
+.next-steps {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.next-steps h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.next-steps ol {
+    padding-left: 20px;
+}
+
+.next-steps li {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.next-steps li strong {
+    color: var(--text-primary);
+}
+
+/* Contact Preference */
+.contact-preference {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.contact-preference h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+/* Terms */
+.terms-group {
+    margin: 24px 0;
+}
+
+.checkbox-terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.checkbox-terms input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--light-green);
+}
+
+.checkbox-terms span {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.checkbox-terms a {
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+.checkbox-terms a:hover {
+    text-decoration: underline;
+}
+
+/* Info Section */
+.info-section {
+    position: relative;
+}
+
+.info-sticky {
+    position: sticky;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.info-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(0, 197, 146, 0.1);
+    border: 1px solid rgba(0, 197, 146, 0.3);
+    border-radius: 100px;
+    color: var(--light-green);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.info-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.info-item i {
+    color: var(--light-green);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Trust Badges */
+.trust-badges {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.trust-item i {
+    font-size: 28px;
+    color: var(--light-green);
+}
+
+.trust-item span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.trust-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Testimonial */
+.testimonial {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.testimonial-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.testimonial-stars i {
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.testimonial-author span {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+footer {
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+    padding: 48px 0 24px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-section h3 span {
+    color: var(--light-green);
+    font-weight: 300;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-info a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--light-green);
+}
+
+.contact-info i {
+    color: var(--light-green);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        gap: 8px;
+    }
+
+    .step-label {
+        display: none;
+    }
+
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .progress-line {
+        width: 40px;
+    }
+
+    .main-content {
+        margin-top: 150px;
+    }
+
+    .step-header h2 {
+        font-size: 24px;
+    }
+
+    .form-content {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column-reverse;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
