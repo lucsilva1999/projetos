@@ -75,7 +75,11 @@ header {
     color: var(--light-green);
 }
 
+<<<<<<< HEAD
 /* Progress Bar */
+=======
+/* Progress Bar Gamificado */
+>>>>>>> 670a9cf (review form questions)
 .progress-container {
     position: fixed;
     top: 73px;
@@ -83,6 +87,7 @@ header {
     right: 0;
     background: var(--bg-dark);
     border-bottom: 1px solid var(--border-color);
+<<<<<<< HEAD
     padding: 24px 0;
     z-index: 999;
 }
@@ -134,18 +139,98 @@ header {
 }
 
 .progress-step.active .step-label {
+=======
+    padding: 16px 0;
+    z-index: 999;
+}
+
+.progress-gamified {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-step-indicator {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.progress-step-indicator strong {
+>>>>>>> 670a9cf (review form questions)
     color: var(--light-green);
     font-weight: 600;
 }
 
+<<<<<<< HEAD
 .progress-line {
     width: 80px;
     height: 2px;
     background: var(--border-color);
+=======
+.progress-percent {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--light-green);
+}
+
+.progress-track {
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--light-green) 0%, #00d9a0 100%);
+    border-radius: 100px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 197, 146, 0.5);
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-motivation {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    min-height: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+>>>>>>> 670a9cf (review form questions)
 }
 
 /* Main Content */
 .main-content {
+<<<<<<< HEAD
     margin-top: 180px;
     padding: 48px 0 80px;
     min-height: calc(100vh - 180px);
@@ -165,13 +250,33 @@ header {
 .form-step {
     display: none;
     animation: fadeIn 0.3s ease-in;
+=======
+    margin-top: 220px;
+    padding: 48px 0 80px;
+    min-height: calc(100vh - 150px);
+}
+
+.form-container-centered {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form Section */
+.form-step {
+    display: none;
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> 670a9cf (review form questions)
 }
 
 .form-step.active {
     display: block;
 }
 
+<<<<<<< HEAD
 @keyframes fadeIn {
+=======
+@keyframes slideIn {
+>>>>>>> 670a9cf (review form questions)
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -218,6 +323,16 @@ header {
     color: var(--text-primary);
 }
 
+<<<<<<< HEAD
+=======
+.form-group label .optional {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 12px;
+    font-style: italic;
+}
+
+>>>>>>> 670a9cf (review form questions)
 .form-group input,
 .form-group select {
     width: 100%;
@@ -542,6 +657,7 @@ header {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /* Info Section */
 .info-section {
     position: relative;
@@ -668,24 +784,40 @@ header {
     color: var(--text-secondary);
 }
 
+=======
+>>>>>>> 670a9cf (review form questions)
 /* Footer */
 footer {
     background: var(--bg-dark);
     border-top: 1px solid var(--border-color);
+<<<<<<< HEAD
     padding: 48px 0 24px;
+=======
+    padding: 80px 0 32px;
+>>>>>>> 670a9cf (review form questions)
 }
 
 .footer-content {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     margin-bottom: 32px;
+=======
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+>>>>>>> 670a9cf (review form questions)
 }
 
 .footer-section h3 {
     font-size: 24px;
     font-weight: 700;
+<<<<<<< HEAD
     margin-bottom: 12px;
+=======
+    margin-bottom: 16px;
+>>>>>>> 670a9cf (review form questions)
 }
 
 .footer-section h3 span {
@@ -693,6 +825,7 @@ footer {
     font-weight: 300;
 }
 
+<<<<<<< HEAD
 .footer-section h4 {
     font-size: 16px;
     font-weight: 600;
@@ -715,12 +848,62 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
+=======
+.footer-section p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--light-green);
+    border-color: var(--light-green);
+    color: var(--bg-black);
+    transform: translateY(-2px);
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+>>>>>>> 670a9cf (review form questions)
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
 }
 
+<<<<<<< HEAD
 .contact-info a:hover {
     color: var(--light-green);
 }
@@ -733,11 +916,57 @@ footer {
     text-align: center;
     padding-top: 24px;
     border-top: 1px solid var(--border-color);
+=======
+.footer-section ul li a:hover {
+    color: var(--light-green);
+}
+
+/* Regulatory */
+.footer-regulatory {
+    padding: 32px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 32px;
+}
+
+.regulatory-logos {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.regulatory-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.regulatory-item i {
+    font-size: 32px;
+    color: var(--light-green);
+}
+
+.regulatory-item span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.regulatory-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+>>>>>>> 670a9cf (review form questions)
 }
 
 .footer-bottom p {
     color: var(--text-secondary);
     font-size: 14px;
+<<<<<<< HEAD
 }
 
 /* Responsive */
@@ -772,6 +1001,38 @@ footer {
 
     .main-content {
         margin-top: 150px;
+=======
+    margin-bottom: 16px;
+}
+
+.footer-disclaimer {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .progress-gamified {
+        padding: 0 16px;
+    }
+
+    .progress-percent {
+        font-size: 20px;
+    }
+
+    .progress-step-indicator {
+        font-size: 13px;
+    }
+
+    .progress-motivation {
+        font-size: 13px;
+    }
+
+    .main-content {
+        margin-top: 140px;
+>>>>>>> 670a9cf (review form questions)
     }
 
     .step-header h2 {
@@ -799,4 +1060,12 @@ footer {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+<<<<<<< HEAD
+=======
+
+    .regulatory-logos {
+        flex-direction: column;
+        gap: 24px;
+    }
+>>>>>>> 670a9cf (review form questions)
 }

@@ -1,21 +1,80 @@
 // Step Navigation
+<<<<<<< HEAD
 let currentStep = 1;
 
 function nextStep(step) {
     // Validate current step before proceeding
     if (!validateStep(currentStep)) {
+=======
+let currentStep = 0;
+
+// Mensagens motivacionais para cada etapa
+const motivationalMessages = {
+    1: "🚀 Vamos lá! Só mais alguns passos para começar a investir",
+    2: "💪 Ótimo! Você está quase lá",
+    3: "🎯 Incrível! Última etapa antes do seu futuro financeiro",
+    4: "🎉 Parabéns! Você completou o cadastro"
+};
+
+function updateProgressBar() {
+    const progressContainer = document.querySelector('.progress-container');
+    
+    if (currentStep === 0) {
+        progressContainer.style.display = 'none';
+        return;
+    } else {
+        progressContainer.style.display = 'block';
+    }
+
+    const percent = (currentStep / 4) * 100;
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    const currentStepNum = document.getElementById('currentStepNum');
+    const motivationText = document.getElementById('motivationText');
+    
+    // Atualiza a barra
+    progressFill.style.width = `${percent}%`;
+    progressPercent.textContent = Math.round(percent);
+    currentStepNum.textContent = currentStep;
+    
+    // Atualiza mensagem motivacional com animação
+    motivationText.style.animation = 'none';
+    setTimeout(() => {
+        motivationText.textContent = motivationalMessages[currentStep];
+        motivationText.style.animation = 'fadeIn 0.5s ease-in';
+    }, 50);
+}
+
+// Initialize progress bar state
+document.addEventListener('DOMContentLoaded', () => {
+    updateProgressBar();
+});
+
+function nextStep(step) {
+    // Validate current step before proceeding (skip validation for step 0)
+    if (currentStep !== 0 && !validateStep(currentStep)) {
+>>>>>>> 670a9cf (review form questions)
         return;
     }
 
     // Hide current step
     document.getElementById(`step-${currentStep}`).classList.remove('active');
+<<<<<<< HEAD
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('completed');
+=======
+>>>>>>> 670a9cf (review form questions)
 
     // Show next step
     currentStep = step;
     document.getElementById(`step-${currentStep}`).classList.add('active');
+<<<<<<< HEAD
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
+=======
+    
+    // Atualiza progress bar gamificada
+    updateProgressBar();
+>>>>>>> 670a9cf (review form questions)
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,13 +86,22 @@ function nextStep(step) {
 function prevStep(step) {
     // Hide current step
     document.getElementById(`step-${currentStep}`).classList.remove('active');
+<<<<<<< HEAD
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
+=======
+>>>>>>> 670a9cf (review form questions)
 
     // Show previous step
     currentStep = step;
     document.getElementById(`step-${currentStep}`).classList.add('active');
+<<<<<<< HEAD
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
     document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('completed');
+=======
+    
+    // Atualiza progress bar gamificada
+    updateProgressBar();
+>>>>>>> 670a9cf (review form questions)
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -91,10 +159,14 @@ function saveProgress() {
         nome: document.getElementById('nome')?.value || '',
         email: document.getElementById('email')?.value || '',
         telefone: document.getElementById('telefone')?.value || '',
+<<<<<<< HEAD
         cpf: document.getElementById('cpf')?.value || '',
         experiencia: document.getElementById('experiencia')?.value || '',
         renda: document.getElementById('renda')?.value || '',
         patrimonio: document.getElementById('patrimonio')?.value || ''
+=======
+        experiencia: document.getElementById('experiencia')?.value || ''
+>>>>>>> 670a9cf (review form questions)
     };
 
     localStorage.setItem('agoraFormProgress', JSON.stringify(formData));
@@ -128,6 +200,7 @@ function finishRegistration() {
     // Collect all form data
     const formData = {
         // Step 1
+<<<<<<< HEAD
         nome: document.getElementById('nome').value,
         email: document.getElementById('email').value,
         telefone: document.getElementById('telefone').value,
@@ -139,15 +212,29 @@ function finishRegistration() {
         experiencia: document.getElementById('experiencia').value,
         renda: document.getElementById('renda').value,
         patrimonio: document.getElementById('patrimonio').value,
+=======
+        nome: document.getElementById('nome')?.value,
+        email: document.getElementById('email')?.value,
+        telefone: document.getElementById('telefone')?.value,
+        
+        // Step 2
+        experiencia: document.getElementById('experiencia')?.value,
+>>>>>>> 670a9cf (review form questions)
         risco: document.querySelector('input[name="risco"]:checked')?.value || '',
         
         // Step 3
         objetivos: Array.from(document.querySelectorAll('input[name="objetivo"]:checked')).map(el => el.value),
+<<<<<<< HEAD
         prazo: document.getElementById('prazo').value,
         interesses: Array.from(document.querySelectorAll('input[name="interesse"]:checked')).map(el => el.value),
         
         // Terms
         aceitaComunicacao: document.getElementById('comunicacao').checked
+=======
+        
+        // Terms
+        aceitaComunicacao: document.getElementById('comunicacao')?.checked
+>>>>>>> 670a9cf (review form questions)
     };
 
     console.log('Dados do formulário:', formData);
@@ -173,6 +260,12 @@ function finishRegistration() {
 
 // Input Masks
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
+=======
+    // Initialize progress bar
+    updateProgressBar();
+    
+>>>>>>> 670a9cf (review form questions)
     // Load saved progress
     loadProgress();
 

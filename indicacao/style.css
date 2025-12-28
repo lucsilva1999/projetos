@@ -173,6 +173,16 @@ header {
     color: var(--text-secondary);
 }
 
+<<<<<<< HEAD
+=======
+.disclaimer-small {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 16px;
+    font-style: italic;
+}
+
+>>>>>>> 670a9cf (review form questions)
 /* Hero Visual */
 .hero-visual {
     position: relative;
@@ -248,6 +258,311 @@ header {
     color: var(--text-secondary);
 }
 
+<<<<<<< HEAD
+=======
+.badge-secondary {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(0, 197, 146, 0.1);
+    border: 1px solid rgba(0, 197, 146, 0.3);
+    border-radius: 100px;
+    color: var(--light-green);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* Market Performance Section */
+.market-performance {
+    padding: 120px 0;
+    background: var(--bg-black);
+}
+
+.performance-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.chart-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.chart-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-dot.agora {
+    background: var(--light-green);
+    box-shadow: 0 0 8px rgba(0, 197, 146, 0.5);
+}
+
+.legend-dot.poupanca {
+    background: #666;
+}
+
+.legend-dot.cdi {
+    background: #FFA500;
+}
+
+.chart {
+    height: 300px;
+    margin-bottom: 32px;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 197, 146, 0.05) 0%, transparent 100%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chart canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-values {
+    display: grid;
+    gap: 16px;
+}
+
+.value-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 3px solid var(--border-color);
+}
+
+.value-item:first-child {
+    border-left-color: var(--light-green);
+}
+
+.value-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.value-amount {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 16px;
+}
+
+.value-amount.green {
+    color: var(--light-green);
+}
+
+.value-amount.gray {
+    color: #888;
+}
+
+.value-percent {
+    font-size: 14px;
+    padding: 4px 12px;
+    background: rgba(0, 197, 146, 0.1);
+    border-radius: 100px;
+    color: var(--light-green);
+}
+
+.performance-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateX(4px);
+    border-color: var(--light-green);
+}
+
+.highlight-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 197, 146, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.highlight-icon i {
+    font-size: 22px;
+    color: var(--light-green);
+}
+
+.highlight-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.highlight-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 120px 0;
+    background: var(--bg-dark);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--light-green);
+    box-shadow: 0 8px 24px rgba(0, 197, 146, 0.1);
+}
+
+.testimonial-card.featured {
+    border-color: var(--light-green);
+    background: linear-gradient(135deg, rgba(0, 197, 146, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    background: var(--light-green);
+    color: var(--bg-black);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--light-green);
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.testimonial-info p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.testimonial-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-mini {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--light-green);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.testimonial-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+>>>>>>> 670a9cf (review form questions)
 /* How It Works Section */
 .how-it-works {
     padding: 120px 0;
@@ -674,4 +989,60 @@ footer {
     .hero-visual {
         display: none;
     }
+<<<<<<< HEAD
 }
+=======
+
+    /* Market Performance - Mobile */
+    .performance-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chart {
+        height: 250px;
+    }
+
+    .performance-highlights {
+        gap: 16px;
+    }
+
+    .highlight-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-icon {
+        margin: 0 auto;
+    }
+
+    /* Testimonials - Mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card.featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .performance-content {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+>>>>>>> 670a9cf (review form questions)

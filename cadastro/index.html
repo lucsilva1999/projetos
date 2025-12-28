@@ -23,6 +23,7 @@
         </nav>
     </header>
 
+<<<<<<< HEAD
     <!-- Progress Bar -->
     <div class="progress-container">
         <div class="container">
@@ -45,10 +46,30 @@
                 <div class="progress-step" data-step="4">
                     <div class="step-circle">4</div>
                     <div class="step-label">Próximos Passos</div>
+=======
+    <!-- Progress Bar Gamificado -->
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-gamified">
+                <div class="progress-info">
+                    <div class="progress-step-indicator">
+                        <span class="step-current">Etapa <strong id="currentStepNum">1</strong> de <strong>4</strong></span>
+                    </div>
+                    <div class="progress-percent">
+                        <span id="progressPercent">25</span>%
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill" style="width: 25%"></div>
+                </div>
+                <div class="progress-motivation" id="motivationText">
+                    🚀 Vamos lá! Só mais alguns passos para começar a investir
+>>>>>>> 670a9cf (review form questions)
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <!-- Main Content -->
     <main class="main-content">
@@ -58,6 +79,49 @@
                 <div class="form-section">
                     <!-- Step 1: Dados Pessoais -->
                     <div class="form-step active" id="step-1">
+=======
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container-centered">
+                <!-- Form Section -->
+                    <!-- Step 0: Intro / Start Screen -->
+                    <div class="form-step active" id="step-0">
+                        <div class="step-header" style="text-align: center;">
+                            <h2>Bem-vindo à Revolução dos seus Investimentos 🚀</h2>
+                            <p>Você está a poucos passos de ter uma assessoria exclusiva e personalizada.</p>
+                        </div>
+                        <div class="form-content" style="text-align: center;">
+                            <div style="margin-bottom: 32px;">
+                                <i class="fas fa-chart-line" style="font-size: 64px; color: var(--light-green); margin-bottom: 24px;"></i>
+                                <h3 style="font-size: 24px; margin-bottom: 16px;">Por que a Ágora?</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                                    Conectamos você aos melhores produtos do mercado financeiro com a segurança que você precisa e a rentabilidade que você merece.
+                                </p>
+                                <ul style="text-align: left; max-width: 400px; margin: 0 auto; list-style: none;">
+                                    <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                        <i class="fas fa-check" style="color: var(--light-green);"></i>
+                                        <span>Assessoria especializada e gratuita</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                        <i class="fas fa-check" style="color: var(--light-green);"></i>
+                                        <span>Plataforma premiada e segura</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                        <i class="fas fa-check" style="color: var(--light-green);"></i>
+                                        <span>Produtos para todos os perfis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn-next" onclick="nextStep(1)" style="width: 100%; max-width: 300px; margin: 0 auto;">
+                                Começar Agora
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>    
+                    <!-- Step 1: Dados Pessoais -->
+                    <div class="form-step" id="step-1">
+>>>>>>> 670a9cf (review form questions)
                         <div class="step-header">
                             <h2>Prazer em conhecê-lo!</h2>
                             <p>Nos conte um pouco sobre você para que possamos oferecer a melhor assessoria</p>
@@ -71,6 +135,7 @@
                                 <label for="email">E-mail</label>
                                 <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                             </div>
+<<<<<<< HEAD
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="telefone">Telefone/WhatsApp</label>
@@ -96,6 +161,11 @@
                                         <option value="nao-informar">Prefiro não informar</option>
                                     </select>
                                 </div>
+=======
+                            <div class="form-group">
+                                <label for="telefone">Telefone/WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+>>>>>>> 670a9cf (review form questions)
                             </div>
                             <button type="button" class="btn-next" onclick="nextStep(2)">
                                 Continuar
@@ -123,6 +193,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="renda">Renda mensal aproximada</label>
                                 <select id="renda" name="renda" required>
                                     <option value="">Selecione sua faixa de renda</option>
@@ -147,6 +218,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
+=======
+>>>>>>> 670a9cf (review form questions)
                                 <label>Tolerância a risco</label>
                                 <div class="radio-group">
                                     <label class="radio-card">
@@ -248,6 +321,7 @@
                                     </label>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <div class="form-group">
                                 <label for="prazo">Prazo para seus objetivos</label>
                                 <select id="prazo" name="prazo" required>
@@ -305,6 +379,8 @@
                                     </label>
                                 </div>
                             </div>
+=======
+>>>>>>> 670a9cf (review form questions)
                             <div class="button-group">
                                 <button type="button" class="btn-back" onclick="prevStep(2)">
                                     <i class="fas fa-arrow-left"></i>
@@ -371,7 +447,11 @@
                                     </div>
                                 </div>
                                 <div class="benefit-item">
+<<<<<<< HEAD
                                     <i class="fas fa-shield-check"></i>
+=======
+                                    <i class="fas fa-shield"></i>
+>>>>>>> 670a9cf (review form questions)
                                     <div>
                                         <strong>Segurança Total</strong>
                                         <span>Regulados pelo Banco Central, CVM e membros da B3</span>
@@ -433,6 +513,7 @@
                             </button>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
 
                 <!-- Right Side - Info -->
@@ -504,6 +585,11 @@
         </div>
     </main>
 
+=======
+            </div>
+        </div>
+    </main>
+>>>>>>> 670a9cf (review form questions)
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -511,6 +597,7 @@
                 <div class="footer-section">
                     <h3>ÁGORA<span>Investimentos</span></h3>
                     <p>A plataforma completa para você investir com inteligência e segurança.</p>
+<<<<<<< HEAD
                 </div>
                 <div class="footer-section">
                     <h4>Precisa de ajuda?</h4>
@@ -523,6 +610,82 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Ágora Investimentos. Todos os direitos reservados.</p>
+=======
+                    <div class="social-links">
+                        <a href="https://instagram.com/agorainvestimentos" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/agorainvestimentos" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/agorainvestimentos" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/agorainvest" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com/agorainvestimentos" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Renda Fixa</a></li>
+                        <li><a href="#">Renda Variável</a></li>
+                        <li><a href="#">Fundos de Investimento</a></li>
+                        <li><a href="#">COE</a></li>
+                        <li><a href="#">Previdência</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="https://www.agorainvestimentos.com.br" target="_blank">Site Oficial</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Ouvidoria</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Segurança</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-regulatory">
+                <div class="regulatory-logos">
+                    <div class="regulatory-item">
+                        <i class="fas fa-university"></i>
+                        <span>Regulado pelo<br><strong>Banco Central</strong></span>
+                    </div>
+                    <div class="regulatory-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Autorizado pela<br><strong>CVM</strong></span>
+                    </div>
+                    <div class="regulatory-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Membro da<br><strong>B3</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Ágora Investimentos. Todos os direitos reservados.</p>
+                <p class="footer-disclaimer">
+                    A Ágora Investimentos é uma marca da Ágora Corretora de Títulos e Valores Mobiliários S.A., 
+                    instituição autorizada a funcionar pelo Banco Central do Brasil e pela Comissão de Valores Mobiliários (CVM). 
+                    Investimentos em renda variável estão sujeitos a riscos e podem resultar em perdas patrimoniais.
+                </p>
+>>>>>>> 670a9cf (review form questions)
             </div>
         </div>
     </footer>
