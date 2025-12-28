@@ -19,10 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-<<<<<<< HEAD
-});
-
-=======
 
     // Initialize performance chart
     initPerformanceChart();
@@ -165,7 +161,6 @@ function initPerformanceChart() {
     });
 }
 
->>>>>>> 670a9cf (review form questions)
 // Share via WhatsApp
 function shareWhatsApp() {
     const text = encodeURIComponent('Ei! Invista na Ágora usando meu link e ganhe benefícios exclusivos! 🚀💰');

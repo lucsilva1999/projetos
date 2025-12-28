@@ -173,8 +173,6 @@ header {
     color: var(--text-secondary);
 }
 
-<<<<<<< HEAD
-=======
 .disclaimer-small {
     font-size: 12px;
     color: var(--text-secondary);
@@ -182,7 +180,6 @@ header {
     font-style: italic;
 }
 
->>>>>>> 670a9cf (review form questions)
 /* Hero Visual */
 .hero-visual {
     position: relative;
@@ -258,8 +255,6 @@ header {
     color: var(--text-secondary);
 }
 
-<<<<<<< HEAD
-=======
 .badge-secondary {
     display: inline-block;
     padding: 8px 16px;
@@ -562,7 +557,6 @@ header {
     font-style: italic;
 }
 
->>>>>>> 670a9cf (review form questions)
 /* How It Works Section */
 .how-it-works {
     padding: 120px 0;
@@ -989,9 +983,6 @@ footer {
     .hero-visual {
         display: none;
     }
-<<<<<<< HEAD
-}
-=======
 
     /* Market Performance - Mobile */
     .performance-content {
@@ -1045,4 +1036,3 @@ footer {
     }
 }
 
->>>>>>> 670a9cf (review form questions)

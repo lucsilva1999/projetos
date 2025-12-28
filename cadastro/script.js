@@ -1,11 +1,4 @@
 // Step Navigation
-<<<<<<< HEAD
-let currentStep = 1;
-
-function nextStep(step) {
-    // Validate current step before proceeding
-    if (!validateStep(currentStep)) {
-=======
 let currentStep = 0;
 
 // Mensagens motivacionais para cada etapa
@@ -53,28 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function nextStep(step) {
     // Validate current step before proceeding (skip validation for step 0)
     if (currentStep !== 0 && !validateStep(currentStep)) {
->>>>>>> 670a9cf (review form questions)
         return;
     }
 
     // Hide current step
     document.getElementById(`step-${currentStep}`).classList.remove('active');
-<<<<<<< HEAD
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('completed');
-=======
->>>>>>> 670a9cf (review form questions)
 
     // Show next step
     currentStep = step;
     document.getElementById(`step-${currentStep}`).classList.add('active');
-<<<<<<< HEAD
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
-=======
     
     // Atualiza progress bar gamificada
     updateProgressBar();
->>>>>>> 670a9cf (review form questions)
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -86,22 +69,13 @@ function nextStep(step) {
 function prevStep(step) {
     // Hide current step
     document.getElementById(`step-${currentStep}`).classList.remove('active');
-<<<<<<< HEAD
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
-=======
->>>>>>> 670a9cf (review form questions)
 
     // Show previous step
     currentStep = step;
     document.getElementById(`step-${currentStep}`).classList.add('active');
-<<<<<<< HEAD
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
-    document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('completed');
-=======
     
     // Atualiza progress bar gamificada
     updateProgressBar();
->>>>>>> 670a9cf (review form questions)
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -159,14 +133,7 @@ function saveProgress() {
         nome: document.getElementById('nome')?.value || '',
         email: document.getElementById('email')?.value || '',
         telefone: document.getElementById('telefone')?.value || '',
-<<<<<<< HEAD
-        cpf: document.getElementById('cpf')?.value || '',
-        experiencia: document.getElementById('experiencia')?.value || '',
-        renda: document.getElementById('renda')?.value || '',
-        patrimonio: document.getElementById('patrimonio')?.value || ''
-=======
         experiencia: document.getElementById('experiencia')?.value || ''
->>>>>>> 670a9cf (review form questions)
     };
 
     localStorage.setItem('agoraFormProgress', JSON.stringify(formData));
@@ -200,41 +167,19 @@ function finishRegistration() {
     // Collect all form data
     const formData = {
         // Step 1
-<<<<<<< HEAD
-        nome: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        telefone: document.getElementById('telefone').value,
-        cpf: document.getElementById('cpf').value,
-        dataNascimento: document.getElementById('data-nascimento').value,
-        genero: document.getElementById('genero').value,
-        
-        // Step 2
-        experiencia: document.getElementById('experiencia').value,
-        renda: document.getElementById('renda').value,
-        patrimonio: document.getElementById('patrimonio').value,
-=======
         nome: document.getElementById('nome')?.value,
         email: document.getElementById('email')?.value,
         telefone: document.getElementById('telefone')?.value,
         
         // Step 2
         experiencia: document.getElementById('experiencia')?.value,
->>>>>>> 670a9cf (review form questions)
         risco: document.querySelector('input[name="risco"]:checked')?.value || '',
         
         // Step 3
         objetivos: Array.from(document.querySelectorAll('input[name="objetivo"]:checked')).map(el => el.value),
-<<<<<<< HEAD
-        prazo: document.getElementById('prazo').value,
-        interesses: Array.from(document.querySelectorAll('input[name="interesse"]:checked')).map(el => el.value),
-        
-        // Terms
-        aceitaComunicacao: document.getElementById('comunicacao').checked
-=======
         
         // Terms
         aceitaComunicacao: document.getElementById('comunicacao')?.checked
->>>>>>> 670a9cf (review form questions)
     };
 
     console.log('Dados do formulário:', formData);
@@ -260,12 +205,9 @@ function finishRegistration() {
 
 // Input Masks
 document.addEventListener('DOMContentLoaded', function() {
-<<<<<<< HEAD
-=======
     // Initialize progress bar
     updateProgressBar();
     
->>>>>>> 670a9cf (review form questions)
     // Load saved progress
     loadProgress();
 
